@@ -7,18 +7,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-    @GetMapping("hello")
-    @ResponseBody
-    public String hello(){
-        return "Hello, Spring!";
-    }
 
+//    //handle requests at path http://localhost:8080/hello
+//    @GetMapping("hello")
+//    @ResponseBody
+//    public String hello(){
+//        return "Hello, Spring!";
+//    }
+
+    //handle requests at path http://localhost:8080/goodbye
     @GetMapping("goodbye")
     @ResponseBody
     public String goodbye(){
         return "Goodbye, Spring!";
     }
 
+    //handle requests of the form http://localhost:8080/hello?name=LaunchCode
     @GetMapping("hello")
     @ResponseBody
     public String helloWithQueryParam(@RequestParam String name){
